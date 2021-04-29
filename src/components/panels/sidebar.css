@@ -1,0 +1,46 @@
+.hide-scroll-bar {
+    -ms-overflow-style: none;
+    scrollbar-width: none;
+  }
+  .hide-scroll-bar::-webkit-scrollbar {
+    display: none;
+  }
+.color {
+    background-color: #5A46D6;
+}
+.scroll-box {
+    overflow-y: scroll;
+    height: 100px;
+    padding: 1rem
+}
+.wrapper {
+    overflow: hidden;
+    position: relative;
+    width: 100%; /* real length of dropdown */
+  }
+  
+  .wrapper:after {
+    content: "▼";
+    background-color: rgba(90, 70, 214, 0.28);
+    color: purple;
+    border-radius: 50%;
+    padding: 2px 2px;
+    font-size: 0.8rem;
+    pointer-events: none; /* ▼ click triggers dropdown */
+    position: absolute;
+    right: 0.2rem;
+    top: 0.3rem;
+    z-index: 1;
+  }
+  
+  select {
+    /* remove default caret */
+    -webkit-appearance: none; /* webkit browsers */
+    -moz-appearance: none; /* firefox */
+    appearance: none; /* modern browsers */
+    width: 100%;
+  }
+  
+  select::-ms-expand {
+    display: none; /* remove default caret for ie */
+  }
